@@ -329,12 +329,7 @@ public class MutationFinder extends MutationExtractor {
      */
     public static void main(String[] args) {
         try {
-            /* Ensure that there are three input arguments */
-           /* if (args.length < 3) 
-            {
-                String regularExpressionFile = "C://Users/lih16/Desktop/mutations.txt";
-                String inputFileLocation = "C://Users/lih16/Desktop/23776498_table.txt";
-               String outputFileLocation = "C://Users/lih16/Desktop/o.txt";*/
+          
             	if (args.length == 3) {
                     String regularExpressionFile = args[0];
                     String inputFileLocation = args[1];
@@ -352,12 +347,7 @@ public class MutationFinder extends MutationExtractor {
 
                 String line;
                 while ((line = br.readLine()) != null) {
-                    /* find the first tab character, this marks the end of the id and the beginning of the text */
-                  //  int firstTabIndex = line.indexOf("\t");
-                   // String id = line.substring(0, firstTabIndex);
-                  //  String text = line.substring(firstTabIndex + 1);
-
-                   // String outputLine = id;
+                  
                 	String outputLine = "";
                 	String text=line;
                 	System.out.println(text);
@@ -381,43 +371,23 @@ public class MutationFinder extends MutationExtractor {
                     		index++;
                     		String originalMatch = text.substring(s[0], s[1]);
                     		PointMutation pm=(PointMutation) mutation;
-                    		System.out.println(s[0]+"!"+s[1]+"!!!"+index+"ccccccccccc:"+( (PointMutation) mutation).toString()+":"+pm.getPosition()+":"+pm.getWtResidue()+":"+pm.getMutResidue());
-                    		
+                    	
                     		outputLine=fileName+"\t"+s[0]+"\t"+s[1]+"\t"+( (PointMutation) mutation).toString()+"\t"+pm.getPosition()+"\t"+pm.getWtResidue()+"\t"+pm.getMutResidue();
                     		ps.println(outputLine);
                     		
                     	  
                     	}
-                    /*  for (int i=0;i<locs.size();i++)
-                      {
-                    	  int[] location=locs.
-                        String originalMatch = text.substring(location[0], location[1]);
-                        S
-                        //location[0], location[1], originalMatch, null, pm.getPosition(), String.valueOf(pm.getWtResidue()), String.valueOf(pm.getMutResidue()), Type.SUBSTITUTION, MutationMention.Tool.MUTATIONFINDER);
-                        
-                      
-                       
-                      }*/
+                   
                     }
                     for (Mutation mutation : mutations.keySet()) {
-                    	//mutation.get
-                    	//System.out.println(mutations.get(mutation).size());
+                    	
                         for (int i = 0; i < mutations.get(mutation).size(); i++) {
                         	
-                        	//mutation.
-                            //outputLine += ("\t" + ((PointMutation) mutation).toString());
-                            
-                           // System.out.println(mutations.get(mutation)+":"+i+" aa "+( (PointMutation) mutation).toString());
-                           
-                           // for (int[] temp : entry.getValue()) {
-                                // System.out.println(temp[0]);
-                                // System.out.println(temp[1]);
-                             // }
-                           // ((PointMutation) mutation)
+                        
                             
                         }
                     }
-                    //ps.println(outputLine);
+                   
                 }
 
                 br.close();
