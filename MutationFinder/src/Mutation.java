@@ -25,7 +25,7 @@ public class Mutation {
 
     /**
      * 
-     * @param position -- dev1 test
+     * @param position -- dev1 test2
      *            the sequence position or start position of the mutation
      */
     public Mutation(int position) throws MutationException {
